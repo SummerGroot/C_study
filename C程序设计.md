@@ -133,27 +133,27 @@ return 0;             //函数执行完毕时返回函数值0
 
 如：123.456，-56.7
 
-1. 指数形式
+2. 指数形式
 
 如：`12.34e3`(代表：12.34*10^3^)
 
 `0.145E-25`———>0.145*10^-25^
 
-规定字母e或E代表以10为低的指数
+规定字母`e`或`E`代表以10为底的指数
 
-e或E之前必须有数字，且e或E后必须是整数。
+`e`或`E`之前必须有数字，且`e`或`E`后必须是整数。
 
 ##### 字符常量
 
-普通字符，用单引号阔起来的一个字符，如：‘a’
+**普通字符**，用单引号阔起来的一个字符，如：`'a'`
 
-![重要](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFCSURBVDhPnZNRTsMwDIbtthJ7GxXjmXECxibedwN2A8oN9hoJCU1C9BrrDcYN4BkV6A32DlPHG0htgx2yqEm7afBJUX4ntePELuziIx5GPLTZiqfnbUQgcap1K6jnBvndxaDyq1fWXumdhzfPb2rDYWsG5GxOrmsXfI9HY60tUMICEbqspYRPiTBRGw64ikdzmq9+zT+TqDf4Z5DkSKSRegMWvMB6H+hKmfdVqHexqrBPJuzsfxfjcJat2W6UcXU/XADipTYtXGemWUZEs9kA5bruzFgZ5Ldnh+VBsNyUrw0PitNQZEtt2hmUHX/iOnMPaKmoZGA1lRWAmsc0iwT5xKf5WAwoyoNepnX6P2qYK3D6VSfI1Ykopz3xwhUxcMfSx3MaJxT8erNvMuD0aUrolfuuM3Ms0seeSPskZwio2x/gBxXHd1j10YF/AAAAAElFTkSuQmCC) 字符常量只能是一个字符，不包括单引号(界限符)
+字符常量只能是一个字符，不包括单引号(界限符)
 
-字符常量存储在计算机存储单元中，并不是存储字符本身，而是以其代码(一般采用ASCII码)存储。
+字符常量存储在计算机存储单元中，并不是存储字符本身，而是以其代码(一般采用`ASCII`码)存储。
 
-例如：字符’a’的ASCII代码是97(二进制形式存放)
+例如：字符`'a'`的`ASCII`代码是97(二进制形式存放)
 
-转义字符：以字符“\”开头的字符序列。
+**转义字符**：以字符`"\"`开头的字符序列。
 
 | 转义字符      | 字符值                        | 输出结果                                     |
 | ------------- | ----------------------------- | -------------------------------------------- |
@@ -165,51 +165,51 @@ e或E之前必须有数字，且e或E后必须是整数。
 | \0、\00、\000 | 与该八进制码对应的ASCII字符   | 与该八进制码对应的字符(最多三位八进制数)     |
 | \xh           | 与该十六进制码对应的ASCII字符 | 与该十六进制码对应的字符(最多两位十六进制数) |
 
-
-
 例如：`'\101’`代表八进制101的`ASCII`字符
 
 ##### 字符串常量
 
-如：`"boy"`用双引号把若干字符阔起来。
+如：`"boy"`用双引号把若干字符括起来。
 
 ##### 符号常量
 
 用`#define`指令，指定用一个符号名称代表一个常量。
 
-如：#define PI 3.1415         //宏定义
+如：`#define PI 3.1415`       //宏定义
 
-![重要](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFCSURBVDhPnZNRTsMwDIbtthJ7GxXjmXECxibedwN2A8oN9hoJCU1C9BrrDcYN4BkV6A32DlPHG0htgx2yqEm7afBJUX4ntePELuziIx5GPLTZiqfnbUQgcap1K6jnBvndxaDyq1fWXumdhzfPb2rDYWsG5GxOrmsXfI9HY60tUMICEbqspYRPiTBRGw64ikdzmq9+zT+TqDf4Z5DkSKSRegMWvMB6H+hKmfdVqHexqrBPJuzsfxfjcJat2W6UcXU/XADipTYtXGemWUZEs9kA5bruzFgZ5Ldnh+VBsNyUrw0PitNQZEtt2hmUHX/iOnMPaKmoZGA1lRWAmsc0iwT5xKf5WAwoyoNepnX6P2qYK3D6VSfI1Ykopz3xwhUxcMfSx3MaJxT8erNvMuD0aUrolfuuM3Ms0seeSPskZwio2x/gBxXHd1j10YF/AAAAAElFTkSuQmCC) 行末没有分号
+行末没有分号`;`
 
-所有PI都代表3.1415。
+所有`PI`都代表3.1415。
 
-在编译钱，预处理器先对PI进行处理，把所有PI全部置换为3.1415。
+在编译前，预处理器先对`PI`进行处理，把所有`PI`全部置换为3.1415。
 
-![重要](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFCSURBVDhPnZNRTsMwDIbtthJ7GxXjmXECxibedwN2A8oN9hoJCU1C9BrrDcYN4BkV6A32DlPHG0htgx2yqEm7afBJUX4ntePELuziIx5GPLTZiqfnbUQgcap1K6jnBvndxaDyq1fWXumdhzfPb2rDYWsG5GxOrmsXfI9HY60tUMICEbqspYRPiTBRGw64ikdzmq9+zT+TqDf4Z5DkSKSRegMWvMB6H+hKmfdVqHexqrBPJuzsfxfjcJat2W6UcXU/XADipTYtXGemWUZEs9kA5bruzFgZ5Ldnh+VBsNyUrw0PitNQZEtt2hmUHX/iOnMPaKmoZGA1lRWAmsc0iwT5xKf5WAwoyoNepnX6P2qYK3D6VSfI1Ykopz3xwhUxcMfSx3MaJxT8erNvMuD0aUrolfuuM3Ms0seeSPskZwio2x/gBxXHd1j10YF/AAAAAElFTkSuQmCC) 要区分符号常量和变量，不要把符号常量误认为变量。符号常量不占内存，只是一个临时符号，代表一个值，在预编译后这个符号就不存在了。
+要区分符号常量和变量，不要把符号常量误认为变量。符号常量不占内存，只是一个临时符号，代表一个值，在预编译后这个符号就不存在了。
 
 符号常量用全大写。
 
 #### 变量
 
-变量代表一个有名字的、特定属性的一个存储单元。用来存放数据，也就是存放变量的值。
+![image-20230606225053667](C程序设计.assets/image-20230606225053667.png)
+
+变量代表一个有名字的、特定属性的一个**存储单元**。用来存放数据，也就是存放变量的值。
 
 变量的值是可以改变的。
 
-![重要](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFCSURBVDhPnZNRTsMwDIbtthJ7GxXjmXECxibedwN2A8oN9hoJCU1C9BrrDcYN4BkV6A32DlPHG0htgx2yqEm7afBJUX4ntePELuziIx5GPLTZiqfnbUQgcap1K6jnBvndxaDyq1fWXumdhzfPb2rDYWsG5GxOrmsXfI9HY60tUMICEbqspYRPiTBRGw64ikdzmq9+zT+TqDf4Z5DkSKSRegMWvMB6H+hKmfdVqHexqrBPJuzsfxfjcJat2W6UcXU/XADipTYtXGemWUZEs9kA5bruzFgZ5Ldnh+VBsNyUrw0PitNQZEtt2hmUHX/iOnMPaKmoZGA1lRWAmsc0iwT5xKf5WAwoyoNepnX6P2qYK3D6VSfI1Ykopz3xwhUxcMfSx3MaJxT8erNvMuD0aUrolfuuM3Ms0seeSPskZwio2x/gBxXHd1j10YF/AAAAAElFTkSuQmCC) 变量必须先定义，后使用。
+变量**必须先定义，后使用**。
 
 在定义时制定该变量的名字和类型。
 
-变量名实际上是以一个名称代表饿一个存储地址。
+变量名实际上是以一个名称代表的一个存储地址。
 
 ##### 常变量
 
-定义变量的前面加一个关键字const。
+定义变量的前面加一个关键字`const`。
 
-const int a = 10;
+`const int a = 10;`
 
 在变量存在期间的值不能改变。
 
-有变量的基本属性：有类型，占存储单元，只是不允许修改值。
+有变量的基本属性：有类型，占存储单元，**只是不允许修改值**。
 
 ### 标识符
 
@@ -221,11 +221,13 @@ const int a = 10;
 
 ## 数据类型
 
-### 整型数据的分类
+### 整型数据
 
-#### 基本整型(int)
+#### 整形数据的分类
 
-编译系统分配给int型数据2个字节或4个字节(具体由编译系统决定)
+##### 基本整型(int)
+
+编译系统分配给`int`型数据2个字节或4个字节(具体由编译系统决定)
 
 在存储单元中的存储方式是：
 
@@ -237,40 +239,40 @@ const int a = 10;
 
 最左边的一位表示符号为，0表示正，1表示负。
 
-#### 短整型(short int)
+##### 短整型(short int)
 
 类型名为`short`或`short int`
 
-#### 长整型(long int)
+##### 长整型(long int)
 
 类型名为`long`或`long int`
 
-#### 双长整型(long long int)
+##### 双长整型(long long int)
 
 类型名`long long`或`long long int`，一般分配8个字节。
 
-![问题](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEJSURBVDhPY2RAA8udt6oxMP+tAkp4ALniYMF/DMf+MzFMitzltxLMRwIoBoA0MzL/3g5i/2dgms3EyPABxP73758LIyODB1AsGd0QFigNAUCbQdT/v6yekXu9b4HFIGDGcreNOxj/MeQB2SgGMEFpMGBk+GcLtGUlmmYwYGJk3ABUbQXlwgGKAUCuEtDZj6Ac6oLlbpvaVrhtuAvlwgGaC7ADoOZwoPfyQAELFYIDjGhEB1DNc/8zMB6J3OUPiloUgNcAWLQCNd/GphkE8HuB+c+kf/8YPuPSDAJ4DWBkYHRnYmIohHJJAyDnr3Db9B/KxQlwuoCJ5a8TlDlAYJnLhgsUeYE4wMAAADQ2UW0jvvHhAAAAAElFTkSuQmCC) 没有具体规定各种类型数据所占用存储单元的长度，由编译器自行决定。
+没有具体规定各种类型数据所占用存储单元的长度，由编译器自行决定。
 
 `sizeof(short)<sizeof(int)<sizeof(long)<sizeof(long long)`
 
 `sizeof`是测量类型或变量长度的运算符。
 
-### 整型变量的符号属性
+#### 整型变量的符号属性
 
-| 类型                 | 字节数 | 取值范围   |
-| -------------------- | ------ | ---------- |
-| `int`                | 4      |            |
-| `unsigned int`       | 4      | 0～2^32^-1 |
-| `short`              | 2      |            |
-| `unsigned short`     | 2      |            |
-| `long`               | 4      |            |
-| `unsigned long`      | 4      |            |
-| `long long`          | 8      |            |
-| `unsigned long long` | 8      |            |
+| 类型                 | 字节数 | 取值范围         |
+| -------------------- | ------ | ---------------- |
+| `int`                | 4      | -2~(2^31^-1)     |
+| `unsigned int`       | 4      | 0～2^32^-1       |
+| `short`              | 2      | -2~(2^15^-1)     |
+| `unsigned short`     | 2      |                  |
+| `long`               | 4      | -2^31^~(2^31^-1) |
+| `unsigned long`      | 4      | 0~(2^32^-1)      |
+| `long long`          | 8      | -2^63^~(2^63^-1) |
+| `unsigned long long` | 8      |                  |
 
- 只有整型（包括字符型）数据可以加`signed`或`unsigned`修饰符。实型不能加。
+ 只有整型（包括字符型）数据可以加`signed`或`unsigned`修饰符。实型数据不能加。
 
-对无符号整型数据用`"%u"`格式输出，表示无符号十进制数的格式输出。
+对无符号整型数据用`"%u"`格式输出，`%u`表示无符号十进制数的格式输出。
 
 ### 字符型数据
 
@@ -278,3 +280,36 @@ const int a = 10;
 
 #### 字符与字符代码
 
+**注意：**字符`'1'`和整数1是不同的概念。字符`'1'`只是代表一个形状为`'1'`的符号，在需要时按原样输出，在内存种以`ASCII`码形式存储，占1个字节。而整数1是以整数存储方式(二进制补码方式)存储的。占2个字节或4个字节。
+
+#### 字符变量
+
+字符变量是用类型符`char`定义字符变量。
+
+`char c = '?';`
+
+定义c为字符型变量并使初值为字符`'?'`。`c`是字符变量，实质上是一个字节的整形变量。
+
+在输出字符变量的值时，可以选择以十进制整数形式输出，或以字符形式输出。
+
+| 类型            | 字节数 | 取值范围 |
+| --------------- | ------ | -------- |
+| `signed char`   | 1      | -128~127 |
+| `unsigned char` | 1      | 0~255    |
+
+注意：在存储字符时实际上只用到`0~127`这以部分，其第1位都是0。
+
+### 浮点型数据
+
+浮点型数据是用来表示小数点的实数的。由于小数点可以浮动，所以实数的指数形式称为浮点数。
+
+| 类型     | 字节数 | 有效数字 |
+| -------- | ------ | -------- |
+| `float`  | 4      | 6        |
+| `double` | 8      | 15       |
+
+## 运算符和表达式
+
+### 算术运算符
+
+自增自减
